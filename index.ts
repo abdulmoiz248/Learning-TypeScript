@@ -73,6 +73,16 @@ let getPizzaDetails=(identifier:number | string):Pizza | undefined  => {
 }
 
  addNewitem({name:'BBQ',price:20});
+
+let addToArray=<T>(arr: T[],item: T) : T[] =>{
+     arr.push(item)
+     return arr;
+}
+
+placeOrder('BBQ');
+addToArray<Pizza>(menu,{id:menuid++,name:'Pepperoni',price:25});
+
+
 // placeOrder('BBQ');
 
 // addNewitem({id:menuid++,name:'Pepperoni',price:25});
